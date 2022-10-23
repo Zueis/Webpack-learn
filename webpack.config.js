@@ -9,4 +9,12 @@ module.exports = {
     path: path.resolve(__dirname, "dist"), // directory we need to build our output file
     filename: "[name].js", // name of output file
   },
+  module:{
+    rules:[
+      {
+        test:/\.scss$/,
+        use:['style-loader','css-loader','sass-loader']
+      },
+    ]
+  }
 };
